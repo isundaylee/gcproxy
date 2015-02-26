@@ -1,0 +1,123 @@
+#calendarTitle {
+  width: 80%;
+  max-width: 1200px;
+  display: block;
+  font-size: 40px;
+  margin: auto;
+  margin-top: 90px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+}
+
+#container {
+  width: 80%;
+  max-width: 1200px !important;
+  height: 600px !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-table {
+  display: none;
+}
+
+.wk-weektop, .wk-dummyth, .wk-allday, .view-container-border, .view-cap {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.wk-today .wk-daylink {
+  color: #fff;
+}
+
+.wk-daylink {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #aaa;
+}
+
+.wk-dayname {
+  padding: 10px 0;
+}
+
+.wk-dummyth, .wk-webcontent, .wk-allday {
+  display: none;
+}
+
+.tg-times-pri + .tg-col {
+  background-color: #f8f8f8;
+}
+
+.tg-col:last-child {
+  background-color: #f8f8f8;
+}
+
+.tg-col-today {
+  border-left: 1px solid #ddd;
+}
+
+.tg-times-pri {
+  background-color: #fff;
+}
+
+.tg-time-pri {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  height: 36px !important;
+}
+
+#scrolltimedevents1 {
+  border: none;
+  height: 570px !important;
+}
+
+.chip {
+}
+
+.tg-gutter {
+  margin-right: 0;
+
+}
+
+.tg-nowmarker {
+  border-top-width: 1.5px;
+}
+#tgnowptr {
+  display: none;
+}
+
+.tg-dualmarker {
+  border-top: 1px dotted #ddd;
+}
+
+.cbrd {
+  border-radius: 0;
+  border: none !important;
+}
+
+.cbrd dt, .cbrd dd {
+  padding: 0 5px;
+  font-size: 10px;
+}
+
+.cbrd dd {
+  padding-top: 2px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.cbrd dt {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.element::-webkit-scrollbar {
+  width: 0 !important;
+}
