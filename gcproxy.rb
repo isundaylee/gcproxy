@@ -8,6 +8,7 @@ CSS_FILES = [
   'http://fonts.googleapis.com/css?family=Roboto:400,100,300',
   'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700',
   'http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400',
+  'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
   '/styles.css'
 ]
 

@@ -8,31 +8,29 @@ function rgb2hex(rgb) {
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
-$(function() {
-  window.color_manifest = {
-    "#3c995b": {
-      "primary": "#56D72B",
-      "secondary": "#D4F1C9"
-    },
-    "#536ca6": {
-      "primary": "#1D9BF6",
-      "secondary": "#C8EBFC"
-    },
-    "#d47f1e": {
-      "primary": "#BF57DA",
-      "secondary": "#ECD5F2"
-    },
-    "#9643a5": {
-      "primary": "#FD8308",
-      "secondary": "#FEE5C0"
-    }
+window.color_manifest = {
+  "#3c995b": {
+    "primary": "#56D72B",
+    "secondary": "#D4F1C9"
+  },
+  "#536ca6": {
+    "primary": "#1D9BF6",
+    "secondary": "#C8EBFC"
+  },
+  "#d47f1e": {
+    "primary": "#BF57DA",
+    "secondary": "#ECD5F2"
+  },
+  "#9643a5": {
+    "primary": "#FD8308",
+    "secondary": "#FEE5C0"
   }
+}
 
+function installRenderChecker() {
   window.renderCheckInterval = setInterval(function() {
     if ($('.chip').length > 0) {
-      clearInterval(window.renderCheckInterval);
-
-      $('.chip').each(function(index, chip) {
+      $('.chip:not(.styled)').each(function(index, chip) {
         var ch = $(chip);
         var dl = ch.find('dl');
         var dt = ch.find('dt');
@@ -55,7 +53,32 @@ $(function() {
         dl.css('color', p_color);
 
         ch.css('border-left', '3px solid ' + p_color);
+
+        ch.addClass('styled');
       });
     }
+
+    $('#currentWeek').html($('#currentDate1').text());
   }, 100);
+}
+
+$(function() {
+  $('#calendarTitle').wrap('<div id="titleBar"></div>');
+  $('#calendarTitle').after('\
+    <div id="navigation">\
+      <i id="prevWeek" class="fa fa-caret-left"></i>\
+      <span id="currentWeek"></span>\
+      <i id="nextWeek" class="fa fa-caret-right"></i>\
+    </div>\
+  ');
+
+  $('#prevWeek').click(function() {
+    $('#navBack1').click();
+  });
+
+  $('#nextWeek').click(function() {
+    $('#navForward1').click();
+  });
+
+  installRenderChecker();
 })
